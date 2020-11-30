@@ -1,121 +1,298 @@
 /*
-Theme Name: Codesnipeet
+Theme Name: AwesomeTheme1.0
 Theme URI: http://codesnipeet.com
 Author: Jewel Chowdhury
 Author URI: http://facebook.com/jewelcsebu
-Description: This is only for education.
+Description: This is my First WP theme.
 Version: 1.0
 */
 
 body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+a:link,
+a:visited{
+    color: #006ec3;
+}
+p{
+    line-height: 1.65em;
+}
+
+/* General Layout */
+
+div.container{
+    max-width: 920px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Header */
+
+.site-header{
+    border-bottom: 2px solid #999;
+    margin-bottom: 50px;
+}
+
+/* Footer */
+
+.site-footer{
+    margin-top: 30px;
+    border-top: 2px solid #999;
+}
+
+/* Article */
+
+article.post{
+    margin-top: 8px;
+    border-bottom: 2px dotted #006ec3;
+    
+}
+
+article.post:last-of-type{
+    border-bottom: none;
+}
+
+
+/* Post aside Format style */
+article.post-aside,
+article.post-link{
+    font-size: 130%;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #999;
+}
+
+.mini-meta{
+    font-size: 60%;
+    margin: 0;
+    color: #777;
+}
+
+/* Post Link Format style */
+article.post-link{
+    padding: 0;
+    background-color: green;
+}
+article.post-link a{
+    display: block;
+    padding: 20px;
+  
+}
+/* Post Gallery Format style */
+article.post-gallery{
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+article.post-gallery h2{
+    text-align: center;
+}
+
+article.post-gallery img:hover{
+
+   box-shadow: 5px 5px 10px green;
+}
+
+/* Navigations */
+
+.site-nav ul{
     margin: 0;
     padding: 0;
+}
+
+.site-nav ul li{
+    float: left;
+    list-style: none;
+}
+
+
+/* primary menus */
+.site-header nav ul li{
+    margin-right: 10px;
+}
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited{
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #bbb;
+    border-top: none;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+.site-header nav ul li a:hover{
+    background: #ececec;
+    transition: all 0.6s;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited {
+
+    background-color: #006ec3;
+    color: #fff;
+
+}
+
+/*Footer menus */
+
+.site-footer nav ul li{
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px dotted #bbb;
+}
+
+/* Pages layout */
+
+
+article.page h2{
+    font-size: 300%;
+}
+
+/* info-box */
+
+div.info-box{
+    width: 30%;
+    float: right;
+    margin: 0 0 30px 30px;
+    padding: 20px;
+    background: #bbb;
+    color: rgb(73, 12, 12);
+}
+div.info-box h4{
+    margin-bottom: 5px;
+}
+
+div.info-box p{
+    font-size: 85%;
+}
+
+
+/* children link */
+
+.children-links {
+    margin-bottom: 30px;
+    font-size: 100%;
+}
+.children-links a:link,
+.children-links a:visited{
+    text-decoration: none;
+}
+.children-links ul{
+    float: left;
+}
+.children-links li {
+    margin-right: 20px;
+}
+
+.children-links .parent-link{
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited{
+    color: #333;
+}
+
+.children-links .current_page_item a:link,
+.children-links .current_page_item a:visited {
+    border-bottom: 1px solid #DDD;
+    color: #333;
+    cursor: default;
+}
+
+/* Posts style */
+
+.post h1{
+    margin-bottom: 0;
+}
+
+p.post-info{
+    font-size: 87%;
+    color: #999;
+}
+
+p.post-info a:link,
+p.post-info a:visited{
+    color: #999;
+}
+
+/* Images styles */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.has-thumbnail{
+    position: relative;
+    padding-left: 200px;
+}
+
+.post-thumbnail{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Search */
+
+div.hd-search{
+    float: right;
+}
+
+div.hd-search #searchsubmit{
+    background-color: #006ec3;
+    color: #fff;
+    padding: 5px 14px;
+    border: none;
+    vertical-align: top;
+}
+
+div.hd-search #s{
+    vertical-align: top;
+    padding: 3px 0;
+    border-radius: none;
+}
+
+/* Main column */
+
+.main-column{
+    width: 70%;
+    float: left;
+}
+
+
+
+/* Seconday column */
+
+.secondary-column{
+    width: 30%;
+    float: right;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Footer widget area */
+
+.footer-widget-area{
+    width: 50%;
+    float: left;
+    padding-right: 20px;
     box-sizing: border-box;
-}
-
-/* stylelint-disable selector-list-comma-newline-after */
-
-.blog-header {
-  line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
-}
-
-.blog-header-logo:hover {
-  text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-}
-
-.display-4 {
-  font-size: 2.5rem;
-}
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
-
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-
-.nav-scroller .nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.nav-scroller .nav-link {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: .875rem;
-}
-
-.card-img-right {
-  height: 100%;
-  border-radius: 0 3px 3px 0;
-}
-
-.flex-auto {
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.h-250 { height: 250px; }
-@media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
-}
-
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
-}
-.blog-pagination > .btn {
-  border-radius: 2rem;
-}
-
-/*
- * Blog posts
- */
-.blog-post {
-  margin-bottom: 4rem;
-}
-.blog-post-title {
-  margin-bottom: .25rem;
-  font-size: 2.5rem;
-}
-.blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #999;
-}
-
-/*
- * Footer
- */
-.blog-footer {
-  padding: 2.5rem 0;
-  color: #999;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
-}
-.blog-footer p:last-child {
-  margin-bottom: 0;
 }
